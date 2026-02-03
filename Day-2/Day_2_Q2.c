@@ -16,12 +16,12 @@ int maxProfit(int *prices, int pricesSize)
 
     for (int i = 1; i < pricesSize; i++)
     {
-        // 1. Update minimum buy price if current day is cheaper
+        // Update minimum buy price if current day is cheaper
         if (prices[i] < min_price)
         {
             min_price = prices[i];
         }
-        // 2. Check if selling today gives a better profit
+        // Check if selling today gives a better profit
         else if (prices[i] - min_price > max_profit)
         {
             max_profit = prices[i] - min_price;
