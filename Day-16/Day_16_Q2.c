@@ -4,6 +4,10 @@
 
 void rotate(int *nums, int numsSize, int k)
 {
+    if (numsSize == 0 || k % numsSize == 0) 
+    {
+        return; 
+    }
     k = k % numsSize;
     int temp[k];
     for (int i = 0; i < k; i++)
