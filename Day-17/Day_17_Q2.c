@@ -1,0 +1,27 @@
+// Given an integer array nums, find the subarray with the largest sum, and return its sum.
+// Name: Vatsal Agarwal
+// SAP ID: 590023223
+
+int maxSubArray(int *nums, int numsSize)
+{
+    int maxSum = nums[0];
+    int currentSum = nums[0];
+
+    for (int i = 1; i < numsSize; i++)
+    {
+        if (currentSum < 0)
+        {
+            currentSum = nums[i];
+        }
+        else
+        {
+            currentSum += nums[i];
+        }
+
+        if (currentSum > maxSum)
+        {
+            maxSum = currentSum;
+        }
+    }
+    return maxSum;
+}
